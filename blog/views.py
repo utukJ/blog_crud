@@ -11,25 +11,25 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class BlogListView(ListView):
     model = Post
-    template_name = 'blog/home.html'
+    template_name = 'home.html'
 
 class BlogDetailView(DetailView):
     model = Post
-    template_name = 'blog/post_detail.html'
+    template_name = 'post_detail.html'
 
 class BlogCreateView(CreateView):
     model = Post
-    template_name = 'blog/post_new.html'
+    template_name = 'post_new.html'
     fields = ['title', 'author', 'body']
     
 class BlogUpdateView(UpdateView):
     model = Post
-    template_name = 'blog/post_edit.html'
+    template_name = 'post_edit.html'
     fields = ['title', 'body']
 
 class BlogDeleteView(DeleteView):
     model = Post
-    template_name = 'blog/post_delete.html'
+    template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
 
 class AddCommentView(LoginRequiredMixin, CreateView):
