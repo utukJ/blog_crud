@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 whitenoise = "==5.1.0"
 gunicorn = "==19.9.0"
+python-decouple = "*"
 
 [requires]
 python_version = "3.8"
